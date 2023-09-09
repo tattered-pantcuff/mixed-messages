@@ -6,7 +6,7 @@ const pluralNouns = [];
 
 const singularVerbs = [];
 
-const pluralVerbs = [];
+const pluralVerbs = ['wants', 'looks at', 'uses', 'is', 'says', 'goes', 'gets', 'makes', 'knows', 'thinks', 'takes', 'sees', 'works', 'calls', 'tries', 'asks', 'needs', 'seems', 'helps', 'talks', 'turns', 'starts', 'shows', 'plays', 'moves', 'likes', 'lives', 'believes', 'happens', 'provides', 'includes', 'continues past', 'changes', 'watches', 'follows', 'stops', 'creates', 'allows', 'adds', 'opens', 'walks', 'offers', 'remembers', 'loves', 'considers', 'appears before', 'awaits', 'serves', 'expects', 'stays', 'reaches', 'remains near', 'suggests', 'raises', 'passes', 'requires', 'reports', 'decides for', 'pulls', 'paints'];
 
 
 const listWords = arr => {
@@ -15,6 +15,9 @@ const listWords = arr => {
     console.log(arr[i]);
     }
 };
+//listWords(pluralVerbs);
+
+console.log(`The ${singularNouns[1]} ${pluralVerbs[1]} the ${singularNouns[2]}`);
 
 
 
