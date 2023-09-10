@@ -41,17 +41,18 @@ const words = {
     returnRandomConjunction() {
         let num = Math.floor(Math.random() * this.conjunction.length);
         return this.conjunction[num];
+    },
+    poeticMessages() {
+        return `The ${this.returnRandomAdj()} ${this.returnRandomNoun()} ${this.returnRandomVerb()}, 
+        ${this.returnRandomConjunction()} the ${this.returnRandomAdj()} ${this.returnRandomNoun()} ${this.returnRandomVerb()} the ${this.returnRandomNoun()}.`
     }
 };
 
 
-
-//console.log(words.returnRandomAdj());
-//console.log(words.returnRandomNoun());
-//console.log(words.returnRandomVerb());
-//console.log(words.returnRandomConjunction());
-
-const poeticMessages = () => {
-    console.log('The ' + words.returnRandomAdj() + ' ' + words.returnRandomNoun() + ' ' + words.returnRandomVerb() + ' ' + words.returnRandomConjunction() + ' ' + 'the ' + words.returnRandomAdj() + ' ' + words.returnRandomNoun() + ' ' + words.returnRandomVerb() + ' ' + 'the ' + words.returnRandomNoun() + '.')
+/* const poeticMessages = () => {
+    console.log(`The ${words.returnRandomAdj()} ${words.returnRandomNoun()} ${words.returnRandomVerb()}, 
+    ${words.returnRandomConjunction()} the ${words.returnRandomAdj()} ${words.returnRandomNoun()} ${words.returnRandomVerb()} the ${words.returnRandomNoun()}.`)
 };
-poeticMessages();
+poeticMessages(); */
+
+console.log(words.poeticMessages());
