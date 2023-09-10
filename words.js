@@ -43,16 +43,26 @@ const words = {
         return this.conjunction[num];
     },
     poeticMessages() {
-        return `The ${this.returnRandomAdj()} ${this.returnRandomNoun()} ${this.returnRandomVerb()}, 
-        ${this.returnRandomConjunction()} the ${this.returnRandomAdj()} ${this.returnRandomNoun()} ${this.returnRandomVerb()} the ${this.returnRandomNoun()}.`
+        return `The ${this.returnRandomAdj()} ${this.returnRandomNoun()} ${this.returnRandomVerb()}, ${this.returnRandomConjunction()} the ${this.returnRandomAdj()} ${this.returnRandomNoun()} ${this.returnRandomVerb()} the ${this.returnRandomNoun()}.`
     }
 };
-
-
 /* const poeticMessages = () => {
     console.log(`The ${words.returnRandomAdj()} ${words.returnRandomNoun()} ${words.returnRandomVerb()}, 
     ${words.returnRandomConjunction()} the ${words.returnRandomAdj()} ${words.returnRandomNoun()} ${words.returnRandomVerb()} the ${words.returnRandomNoun()}.`)
 };
 poeticMessages(); */
 
-console.log(words.poeticMessages());
+//console.log(words.poeticMessages());
+
+// add function to create array of phrases when given specific number of phrases to create
+const collectWords = num => {
+    let wordsArray = [];
+    let i = 1;
+    do {
+        wordsArray.push(words.poeticMessages());
+        i = i + 1;
+      } while (i <= num);
+    return wordsArray;
+  };
+
+//console.log(collectWords(5));
